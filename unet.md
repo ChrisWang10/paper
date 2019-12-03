@@ -26,3 +26,14 @@ We call the left side of this by contracting path and right side expansive path.
 
 
 
+At final stage, the energy function is computed by a pixel-wise soft-max over the final feature map combined with the cross entropy loss function.
+
+
+
+**Training**
+
+Ideally the initial weights should be adapted such that each feature map in the network has approximately unit variance. **Otherwise, parts of the network might give excessive activations, while other parts
+never contribute.** 
+
+
+
