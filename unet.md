@@ -14,7 +14,15 @@ Successful training of DNN needs many training samples. This paper presents a **
 
 But if the generated region is small, it needs more computation which slags speed, while larger region reduce accuracy.
 
-More recent approaches proposed a network that takes into account the features of **multiple-layers** 
+More recent approaches proposed a network that takes into account the features of **multiple-layers** features from shadow layers can provide more detail information, deeper layers information have larger receptive field.
+
+
+
+**Network Architecture**
+
+![]( https://github.com/ChrisWang10/paper/raw/master/img/unet_architecture.png )
+
+We call the left side of this by contracting path and right side expansive path. Every step in the expansive path consists of an up-sampling of the feature map followed by a 2x2 convolution (up-convolution") that halves the number of feature channels then ***concatenate with the corresponding cropped feature map from contracting path***. Because of loss of border pixels in every convolution.
 
 
 
